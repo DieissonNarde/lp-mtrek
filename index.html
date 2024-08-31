@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mtrek - Transformação</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mtrek-lilac': '#FF00ED',
+                        'mtrek-dark-purple': '#3D113A',
+                        'mtrek-light-purple': '#FFECFE',
+                        'mtrek-right': '#A32D9B',
+                    },
+                    fontFamily: {
+                        'lato': ['Lato', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(to right, #3D113A, #A32D9B);
+        }
+        .bg-header {
+            background-image: url('/images/CABEÇALHO.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 97px;
+            margin-bottom: -14px;
+        }
+        .bg-header img {
+            width: 100px;
+        }
+        .bg-hero {
+            background-image: url('/images/BG.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* height: 110vh; */
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 560px; /* Ajuste para o tamanho desejado */
+            margin: 0 auto;
+        }
+        .video-container img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: none;
+        }
+        .bg-section1 {
+            background-image: url('/images/Por\ que\ você\ PRECISA\ fazer\ parte\ da\ Mtrek\ agora_.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 460px;
+        }
+        .bg-frame1 {
+            background-image: url('/images/Frame\ 1.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 360px;
+        }
+        .bg-frame2 {
+            background-image: url('/images/Frame\ 2.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 360px;
+        }
+
+        @media only screen and (max-width: 900px) {
+            /* Estilos para telas menores */
+            .bg-section1 {
+                background-image: url('/images/TABLET\ -\ VOCÊ\ PRECISA\ FAZER\ PARTE\ ...3(1).jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 1000px;
+            }
+
+            .bg-frame1, .bg-frame2 {
+                height: 260px;
+            }
+        }
+
+    </style>
+</head>
+<body class="bg-mtrek-light-purple text-mtrek-dark-purple">
+    <header class="bg-header">
+        <div class="container lg:w-3/4 xl:w-3/4 mx-auto px-4 py-6 flex justify-between items-center">
+            <img src="/images/LOGO BRANCO MTREK.png" alt="Logo Mtrek">
+
+            <p class="hidden lg:block text-white italic text-xs">Economize, Ganhe e Realize!</p>
+
+            <nav>
+                <button class="bg-white text-mtrek-dark-purple text-sm font-bold border-2 px-4 py-1 rounded-xl hover:bg-transparent hover:text-white hover:border-mtrek-lilac transition-all duration-300">
+                    Quero ser VIP
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-hero h-full px-4 py-12 text-center">
+            <div class="lg:w-3/4 xl:w-3/4 mx-auto">
+                <h2 class="text-2xl xl:text-4xl text-white font-bold mb-1">Mais Economia, Mais Ganhos.</h2>
+                <p class="text-3xl xl:text-5xl text-white font-bold mb-2">Tudo na Palma da Mão.</p>
+                
+                <p class="sm:text-sm md:text-base lg:text-lg m-auto text-xs font-normal text-white mb-8">Imagine ter mais dinheiro no final do mês, economizando na sua conta de energia até 15%
+                    todos os meses e ganhando em todas as suas compras, online ou nas lojas físicas que você
+                    já frequenta. Tudo isso, de forma 100% gratuita. Junte-se à nossa lista VIP e fique por
+                    dentro das grandes novidades que estão por vir.
+                </p>
+    
+                <button class="bg-white text-mtrek-dark-purple text-sm font-bold border-2 px-8 py-2 rounded-xl text-lg font-extrabold hover:bg-transparent hover:text-white hover:border-mtrek-lilac transition-all duration-300">
+                    Quero Economizar e Ganhar
+                </button>
+
+                <div class="video-container my-10">
+                    <!-- Imagem de capa -->
+                    <img class="rounded-xl" src="images/TAMB-VÍDEO.jpg" alt="Imagem de Capa" id="thumbnail">
+                
+                    <!-- Código de incorporação do YouTube (iframe) -->
+                    
+                    <iframe id="youtube-video" src="https://www.youtube.com/embed/joKDg9QdBpU?si=NgR_JxoEFnANWQat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container w-3/4 mx-auto flex flex-col lg:flex-row xl:flex-row justify-end gap-4 mt-[-35px] lg:mt-[-60px] xl:mt-[-60px]">
+                <div class=" lg:w-1/4 xl:w-1/4 bg-white border-2 border-mtrek-lilac rounded-xl px-4 py-4">
+                    <img class="w-12 mx-auto" src="/images/MERCADO DE ENERGIA + CASHBAKC-275.png" alt="Icone Mercado de Energia">
+                    <h3 class="text-center text-sm text-black font-semibold mb-2">Mercado Livre de Energia</h3>
+                    <p class="text-xs font-thin text-black">O Mercado Livre de Energia da Mtrek oferece até 15% de economia na sua conta de luz + Cashback.</p>
+                </div>
+                <div class="lg:w-1/4 xl:w-1/4 bg-white border-2 border-mtrek-lilac rounded-xl px-4 py-4">
+                    <img class="w-12 mx-auto" src="/images/E-COMMERCE ICONE - LOJAS ONLINE-281.png" alt="Icone Loja Online">
+                    <h3 class="text-center text-sm text-black font-semibold mb-2">Lojas Online</h3>
+                    <p class="text-xs font-thin text-black">Ganhe Cashback e cupons em cada compra online, aumentando seus ganhos e economia.</p>
+                </div>
+                <div class="lg:w-1/4 xl:w-1/4 bg-white border-2 border-mtrek-lilac rounded-xl px-4 py-4">
+                    <img class="w-12 mx-auto" src="/images/mercado local icone-287.png" alt="Icone Mercado Local">
+                    <h3 class="text-center text-sm text-black font-semibold mb-2">Mercado Local</h3>
+                    <p class="text-xs font-thin text-black">Economize em lojas locais da sua cidade que você já frequenta, com descontos exclusivos em cada compra.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="bg-white mx-auto px-4 py-12 text-center">
+            <div class="container lg:w-3/4 xl:w-3/4 bg-mtrek-dark-purple mx-auto py-8 rounded-xl">
+                <h2 class="w-3/4 m-auto text-2xl lg:text-4xl xl:text-4xl text-white font-bold mb-1">Você está a um clique de
+                    transformar sua vida financeira!</h2>
+                
+                <p class="xl:w-1/2 w-3/4 m-auto text-lg font-thin text-white mb-8">Aqui, não é apenas sobre economizar, é sobre GANHAR e REALIZAR, mas
+                    de converter seus gastos diários em ganhos reais e oportunidades para
+                    realizar seus objetivos.
+                </p>
+    
+                <button class="bg-white text-mtrek-dark-purple text-sm font-bold border-2 px-8 py-2 rounded-xl text-lg font-extrabold hover:bg-transparent hover:text-white hover:border-mtrek-lilac transition-all duration-300">
+                    Quero Economizar e Ganhar
+                </button>
+            </div>
+            
+        </section>
+
+        <section class="bg-section1 w-full">
+            <div class="container lg:w-3/4 xl:w-3/4 mx-auto px-8">
+                <h2 class="text-2xl w-3/4 xl:text-4xl xl:w-1/2 m-auto text-white font-bold text-center pt-16 lg:pt-8 xl:pt-8 mb-4">Por que você PRECISA fazer parte da Mtrek agora?</h2>
+
+                <div class="mt-16 grid grid-cols-1 xl:grid-cols-3 gap-14 lg:gap-20 xl:gap-20">
+                    <div class="w-[300px] mx-auto">
+                        <img class="w-14 h-14" src="/images/Por que você PRECISA fazer parte da Mtrek agora_ copiar.png" alt="">
+                        <h3 class="text-xl text-white font-semibold mb-2">Economia Real na Conta de Energia</h3>
+                        <p class="text-white text-xs font-thin">Parece mágica, mas é real. Com a Mtrek, você
+                            pode economizar até 15% na sua conta de
+                            energia todos os meses. Energia elétrica é
+                            uma necessidade para todos, mas por que
+                            pagar mais se você pode economizar e investir
+                            essa diferença nos seus objetivos?</p>
+                    </div>
+                    <div class="w-[300px] mx-auto">
+                        <img class="w-14 h-14" src="/images/Ganhos que Vão Além.png" alt="">
+                        <h3 class="text-xl text-white font-semibold mb-2">Ganhos que Vão Além</h3>
+                        <p class="text-white text-xs font-thin">Aqui, você não só economiza na conta de luz,
+                            mas também ganha cashback em cada compra.
+                            Seja no supermercado, farmácia, posto de
+                            gasolina ou nas suas compras online, seu
+                            dinheiro volta para você. É como ter um bônus
+                            constante, reforçando seu orçamento e
+                            permitindo realizar seus objetivos.</p>
+                    </div>
+                    <div class="w-[300px] mx-auto">
+                        <img class="w-14 h-14" src="/images/Transforme seus gastos em economias.png" alt="">
+                        <h3 class="text-xl text-white font-semibold mb-2">Transforme seus gastos em economias.</h3>
+                        <p class="text-white text-xs font-thin">Imagine realizar seus objetivos – como uma
+                            viagem, uma reforma em casa, ou um curso
+                            para sua carreira – simplesmente por começar
+                            a economizar e ganhar com a nossa
+                            plataforma. Totalmente digital e fácil de usar,
+                            ela está sempre à sua disposição.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-16 bg-white">
+            <div class="container lg:w-3/4 xl:w-3/4 mx-auto px-4">
+                <h2 class="text-2xl lg:text-4xl xl:text-4xl text-black font-bold text-center mb-4 lg:mb-12 xl:mb-12">O Que Nos Torna Únicos?</h2>
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                    <div class="bg-frame1 p-10 flex flex-col justify-center">
+                        <h3 class="text-lg lg:text-2xl xl:text-2xl lg:w-1/2 mx-auto xl:w-3/4 text-white font-semibold mb-2">Descubra o Diferencial da Mtrek.</h3>
+                        <p class="lg:w-1/2 xl:w-1/2 mx-auto text-white text-xs lg:text-sm xl:text-sm font-thin">Queremos que nosso compromisso se transforme
+                            em uma realidade impactante para você. Nunca
+                            desista dos seus sonhos. Nós não nos
+                            comprometemos apenas com economia, mas com a
+                            realização. Nossos membros não só poupam, eles
+                            GANHAM e alcançam objetivos. E isso é possível
+                            porque a Mtrek combina o melhor do Mercado Livre
+                            de Energia com benefícios exclusivos no mercado
+                            local e no e-commerce</p>
+                    </div>
+                    <div class="bg-frame2 p-10 flex flex-col justify-center">
+                        <h3 class="text-lg lg:text-2xl xl:text-2xl lg:w-1/2 mx-auto xl:w-3/4 text-white font-semibold mb-2">Estamos Comprometidos com Você.</h3>
+                        <p class="lg:w-1/2 xl:w-1/2 mx-auto text-white text-xs lg:text-sm xl:text-sm font-thin">Estamos comprometidos com a sua economia. Você
+                            terá acesso a uma economia comprovada por
+                            centenas de membros satisfeitos, além de ganhar em
+                            cada compra que fizer. Não é apenas uma promessa
+                            – é uma realidade transformadora que você precisa
+                            vivenciar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="bg-white">
+            <div class="container lg:w-3/4 xl:w-3/4 flex flex-col items-center xl:flex-row xl:justify-between mx-auto px-4">
+                <div class="w-3/4 xl:w-1/2">
+                    <h2 class="text-3xl text-black font-bold mb-2">Não Perca Tempo!</h2>
+                    <p class="mb-8 text-black text-lg font-thin">Entre para a nossa lista VIP e descubra antes de
+                        todos como transformar suas finanças. Receba
+                        atualizações exclusivas, dicas valiosas e participe da
+                        revolução que está fazendo a diferença na vida de
+                        muitos e você pode ser o próximo.</p>
+                    <p class="hidden lg:block mt-4 text-black font-thin text-sm">Coloque seus dados corretamente e faça parte da nossa lista VIP. Não
+                        espere mais para economizar, ganhar e realizar com a Mtrek. Seu futuro
+                        começa agora.</p>
+                </div>
+
+                <div class="w-3/4 xl:w-1/3 sm:mt-4">
+                    <div class="bg-mtrek-right p-6 rounded-t-[30px]">
+                        <h2 class="text-2xl mb-3 lg:text-3xl xl:text-3xl text-white font-extrabold lg:mb xl:mb">Seja VIP e Transforme Seu Futuro Agora!</h2>
+                        <p class="text-white font-normal text-xs">Preencha o formulário abaixo com os seus dados válidos para participar do acesso VIP.</p>
+                    </div>
+                    
+                    <form class="max-w-md mx-auto">
+                        <div class="mb-4">
+                            <input type="text" placeholder="Nome Completo" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-mtrek-lilac">
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" placeholder="E-mail" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-mtrek-lilac">
+                        </div>
+                        <div class="mb-4">
+                            <input type="tel" placeholder="WhatsApp" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-mtrek-lilac">
+                        </div>
+                        <button type="submit" class="w-full bg-mtrek-lilac text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-transparent hover:text-mtrek-lilac hover:border hover:border-mtrek-lilac transition-all duration-300">
+                            Enviar
+                        </button>
+                    </form>
+
+                    <p class="block lg:hidden xl:hidden mt-4 text-black font-thin text-sm">Coloque seus dados corretamente e faça parte da nossa lista VIP. Não
+                        espere mais para economizar, ganhar e realizar com a Mtrek. Seu futuro
+                        começa agora.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="pt-14 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl text-black font-bold text-center mb-4">Perguntas Frequentes</h2>
+                <p class="text-black font-normal text-sm text-center mb-8">Está com alguma dúvida? Confira nosso FAQ ou entre em contato conosco.</p>
+
+                <div class="lg:w-3/4 xl:max-w-2xl mx-auto">
+                    <div class="space-y-4">
+                        <div>
+                            <button class="accordion-btn w-full text-left px-4 py-3 bg-white border-2 border-mtrek-dark-purple rounded-[30px] text-black font-normal lg:font-semibold xl:font-semibold flex justify-between items-center" onclick="toggleAccordion(this)">
+                                <span class="w-3/4">Como posso me tornar um membro VIP da Mtrek?</span>
+                                <svg class="accordion-icon bg-mtrek-right text-white rounded-[30px] transform transition-transform duration-300 p-1 w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content px-8 py-3 text-black" style="display: none;">
+                                Para se tornar um membro VIP e garantir sua posição entre os primeiros a se cadastrar em nossa plataforma, basta preencher o formulário com seu e-mail e WhatsApp. Clique aqui e aproveite a oportunidade de ser um dos primeiros a usufruir de nossos benefícios, ganhar recompensas, economizar, e realizar seus sonhos dentro do nosso shopping virtual. Lembre-se, o passarinho que acorda cedo bebe água limpa!
+                            </div>
+                        </div>
+                
+                        <div>
+                            <button class="accordion-btn w-full text-left px-4 py-3 bg-white border-2 border-mtrek-dark-purple rounded-[30px] text-black font-normal lg:font-semibold xl:font-semibold flex justify-between items-center" onclick="toggleAccordion(this)">
+                                <span class="w-3/4">Quanto tempo leva para começar a ver os resultados com a Mtrek?</span>
+                                <svg class="accordion-icon bg-mtrek-right text-white rounded-[30px] transform transition-transform duration-300 p-1 w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content px-8 py-3 text-black" style="display: none;">
+                                Imediatamente. Os resultados começam a aparecer rapidamente. A economia na conta de energia pode ser percebida já no próximo mês de faturamento, enquanto o cashback nas suas compras é acumulado imediatamente após cada transação sua e de toda sua rede.
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="accordion-btn w-full text-left px-4 py-3 bg-white border-2 border-mtrek-dark-purple rounded-[30px] text-black font-normal lg:font-semibold xl:font-semibold flex justify-between items-center" onclick="toggleAccordion(this)">
+                                <span class="w-3/4">A Mtrek exige algum investimento inicial ou taxa?</span>
+                                <svg class="accordion-icon bg-mtrek-right text-white rounded-[30px] transform transition-transform duration-300 p-1 w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content px-8 py-3 text-black" style="display: none;">
+                                Não, a Mtrek não exige nenhum investimento ou taxas ocultas. Nossa missão é oferecer economia e ganhos reais sem custos adicionais. Você paga apenas pelo consumo de energia, e os benefícios de cashback e economia são oferecidos sem comprometer seu orçamento.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="bg-white mx-auto px-4 py-12 text-center">
+            <div class="container lg:w-3/4 xl:w-3/4 mx-auto">
+                <h2 class="text-xl lg:text-3xl xl:text-3xl text-black font-bold mb-4">Contate o Atendimento Mtrek</h2>
+                
+                <div class="flex justify-center gap-4">
+                    <button class="bg-mtrek-dark-purple text-white text-sm font-semibold lg:font-bold xl:font-bold border-2 px-6 py-4 lg:px-10 lg:py-2 xl:px-10 xl:py-2 rounded-xl text-lg font-extrabold hover:bg-transparent hover:text-mtrek-dark-purple hover:border-mtrek-lilac transition-all duration-300">
+                        Atendimento via <br> Whatsapp
+                    </button>
+                    <button class="bg-mtrek-dark-purple text-white text-sm font-semibold lg:font-bold xl:font-bold border-2 px-6 py-4 lg:px-10 lg:py-2 xl:px-10 xl:py-2 rounded-xl text-lg font-extrabold hover:bg-transparent hover:text-mtrek-dark-purple hover:border-mtrek-lilac transition-all duration-300">
+                        Atendimento via <br> E-mail
+                    </button>
+                </div>
+            </div>
+                
+        </section>
+
+    </main>
+
+    <footer class="gradient-bg text-white py-8">
+        <div class="container lg:w-3/4 xl:w-3/4 mx-auto px-4">
+            <div class="flex flex-col lg:flex-row xl:flex-row justify-center items-center gap-2">
+                <div class=" lg:w-1/4">
+                    <img class="w-[200px] lg:w-56" src="/images/LOGO BRANCO MTREK.png" alt="Logo Mtrek">
+                </div>
+                <div class="mt-4 lg:w-1/2">
+                    <p class="text-xs font-normal text-center mb-2">Copyright 2024 Ⓒ Mtrek - Todos os direitos reservados</p>
+                    <p class="text-sm font-bold text-center">Mtrek especializada em pagar Cashback 3x maior em todos
+                        os produtos e serviços que você e sua família consomem.</p>
+                </div>
+                <div class="mt-4 lg:w-1/4">
+                    <div class="flex justify-center gap-2 mb-2">
+                        <a href="https://www.youtube.com/@mtrek1424">
+                            <img class="w-10 h-10" src="/images/Youtube_4-8.png" alt="Icone do Youtube">
+                        </a>
+                        <a href="https://www.instagram.com/mtrek.oficial/">
+                            <img class="w-10 h-10" src="/images/Instagram _1-8.png" alt="Icone do Instagram">
+                        </a>
+                        <a href="https://www.facebook.com/mtrek.oficial">
+                            <img class="w-10 h-10" src="/images/Facebook -8.png" alt="Icone do Facebook">
+                        </a>
+                    </div>
+
+                    <p class="text-xs font-normal text-center">Estabelecida como pessoa Jurídica através do
+                        marco regulatório das Startups.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript para trocar a imagem pelo vídeo ao clicar
+        document.getElementById('thumbnail').addEventListener('click', function() {
+            this.style.display = 'none'; // Esconde a imagem
+            document.getElementById('youtube-video').style.display = 'block'; // Mostra o vídeo
+        });
+
+        function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('svg');
+
+            // Verifica se o acordeão está atualmente ativo
+            const isActive = content.style.display === "block";
+
+            // Fecha todos os outros acordeões
+            document.querySelectorAll('.accordion-content').forEach((item) => {
+                item.style.display = "none";
+                item.previousElementSibling.classList.remove('bg-mtrek-dark-purple', 'text-white');
+                item.previousElementSibling.classList.add('bg-white', 'text-black');
+                item.previousElementSibling.querySelector('svg').classList.remove('rotate-180', 'bg-white', 'text-black');
+                item.previousElementSibling.querySelector('svg').classList.add('text-white', 'bg-mtrek-right');
+            });
+
+            if (!isActive) {
+                // Abre o acordeão clicado
+                content.style.display = "block";
+                element.classList.remove('bg-white', 'text-black');
+                element.classList.add('bg-mtrek-dark-purple', 'text-white');
+                icon.classList.remove('text-white', 'bg-mtrek-right');
+                icon.classList.add('rotate-180', 'bg-white', 'text-black');
+            }
+        }
+
+
+    </script>
+</body>
+</html>
