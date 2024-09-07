@@ -110,6 +110,13 @@
 
         }
 
+        @media only screen and (max-width: 1200px) {
+            .bg-form {
+                height: 230px;
+            }
+
+        }
+
         @media only screen and (max-width: 1024px) {
             /* Estilos para telas menores */
             .bg-section1 {
@@ -150,7 +157,7 @@
 </head>
 <body>
     <header class="bg-header">
-        <div class="container px-4 md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1100px] mx-auto py-6 flex justify-between items-center">
+        <div class="container px-4 lg:px-0 md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1100px] mx-auto py-6 flex justify-between items-center">
             <img src="./images/LOGO BRANCO MTREK.png" alt="Logo Mtrek">
 
             <p class="hidden lg:block text-white italic text-xs">Economize, Ganhe e Realize!</p>
@@ -191,18 +198,18 @@
         </section>
 
         <section>
-            <div class="container px-4 relative md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1100px] mx-auto flex flex-col lg:flex-row xl:flex-row justify-end gap-4 mt-[-60px]">
-                <div class="w-3/4 md:w-1/2 lg:w-1/4 xl:w-1/4 mx-auto bg-white border-2 border-mtrek-lilac rounded-xl px-4 py-4">
+            <div class="container px-4 lg:px-0 relative md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1100px] mx-auto flex flex-col lg:flex-row xl:flex-row justify-end gap-4 mt-[-60px]">
+                <div class="w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4  bg-white border-2 border-mtrek-lilac rounded-xl px-4 py-4">
                     <img class="w-12 mx-auto" src="./images/MERCADO DE ENERGIA + CASHBAKC-275.png" alt="Icone Mercado de Energia">
                     <h3 class="text-center text-sm text-black font-semibold mb-2">Mercado Livre de Energia</h3>
                     <p class="text-xs font-thin text-black">O Mercado Livre de Energia da Mtrek oferece até 15% de economia na sua conta de luz + Cashback.</p>
                 </div>
-                <div class="w-3/4 md:w-1/2 lg:w-1/4 xl:w-1/4 mx-auto bg-white border-2 border-mtrek-lilac rounded-xl px-4 py-4">
+                <div class="w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4  bg-white border-2 border-mtrek-lilac rounded-xl px-4 py-4">
                     <img class="w-12 mx-auto" src="./images/E-COMMERCE ICONE - LOJAS ONLINE-281.png" alt="Icone Loja Online">
                     <h3 class="text-center text-sm text-black font-semibold mb-2">Lojas Online</h3>
                     <p class="text-xs font-thin text-black">Ganhe Cashback e cupons em cada compra online, aumentando seus ganhos e economia.</p>
                 </div>
-                <div class="w-3/4 md:w-1/2 lg:w-1/4 xl:w-1/4 mx-auto bg-white border-2 border-mtrek-lilac rounded-xl px-4 py-4">
+                <div class="w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4  bg-white border-2 border-mtrek-lilac rounded-xl px-4 py-4">
                     <img class="w-12 mx-auto" src="./images/mercado local icone-287.png" alt="Icone Mercado Local">
                     <h3 class="text-center text-sm text-black font-semibold mb-2">Mercado Local</h3>
                     <p class="text-xs font-thin text-black">Economize em lojas locais da sua cidade que você já frequenta, com descontos exclusivos em cada compra.</p>
@@ -210,8 +217,8 @@
             </div>
         </section>
         
-        <section class="mx-auto px-4 py-12 text-center">
-            <div class="container md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1100px] bg-mtrek-dark-purple mx-auto py-8 rounded-xl">
+        <section class="mx-4 py-12 text-center">
+            <div class="container  md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1100px] bg-mtrek-dark-purple mx-auto py-8 rounded-xl">
                 <h2 class="w-3/4 m-auto text-2xl lg:text-4xl xl:text-4xl text-white font-bold mb-1">Você está a um clique de
                     transformar sua vida financeira!</h2>
                 
@@ -228,10 +235,10 @@
         </section>
 
         <section class="bg-section1 w-full">
-            <div class="container md:max-w-[600px] max-w-[1100px] lg:w-3/4 xl:w-3/4 mx-auto px-8">
-                <h2 class="text-2xl w-3/4 xl:text-4xl xl:w-1/2 m-auto text-white font-bold text-center pt-16 lg:pt-8 xl:pt-8 mb-4">Por que você PRECISA fazer parte da Mtrek agora?</h2>
+            <div class="container md:max-w-[600px] lg:max-w-[1000px] xl:w-3/4 mx-auto px-8">
+                <h2 class="text-2xl w-3/4 xl:text-4xl xl:w-1/2 m-auto text-white font-bold text-center pt-16 lg:pt-14 xl:pt-8 mb-4">Por que você PRECISA fazer parte da Mtrek agora?</h2>
 
-                <div class="mt-16 grid grid-cols-1 xl:grid-cols-3 gap-14 lg:gap-16 xl:gap-16 2xl:gap-2">
+                <div class="mt-16 lg:mt-24 xl:mt-16 grid grid-cols-1 lg:grid-cols-3 gap-14 lg:gap-10 xl:gap-16 2xl:gap-2">
                     <div class="w-[300px] 2xl:w-[260px] mx-auto">
                         <img class="w-14 h-14" src="./images/Por que você PRECISA fazer parte da Mtrek agora_ copiar.png" alt="">
                         <h3 class="text-xl text-white font-semibold mb-2">Economia Real na Conta de Energia</h3>
@@ -268,9 +275,9 @@
         </section>
         
         <section class="py-16">
-            <div class="container px-4 md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1100px] md:3/4 mx-auto">
+            <div class="container px-4 lg:px-0 md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1100px] md:3/4 mx-auto">
                 <h2 class="text-2xl lg:text-4xl xl:text-4xl text-black font-bold text-center mb-4 lg:mb-12 xl:mb-12">O Que Nos Torna Únicos?</h2>
-                <div class="flex flex-col justify-between gap-6">
+                <div class="flex flex-col lg:flex-row justify-between gap-6">
                     <div class="bg-frame1 md:w-[500px] mx-auto p-10 flex flex-col justify-center">
                         <h3 class="text-lg md:text-3xl lg:text-xl xl:text-2xl mx-auto xl:w-3/4 text-white font-semibold mb-2">Descubra o Diferencial da Mtrek.</h3>
                         <p class=" xl:w-3/4 mx-auto text-white text-xs md:text-sm lg:text-sm xl:text-sm font-thin">Queremos que nosso compromisso se transforme
@@ -297,8 +304,8 @@
         </section>
         
         <section class="bg-form pt-8">
-            <div class="container md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1100px] flex flex-col items-center xl:flex-row xl:justify-between mx-auto ">
-                <div class="md:ml-14 w-3/4 lg:w-1/2 xl:w-1/2 xl:flex xl:flex-col xl:gap-20">
+            <div class="container md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1100px] flex flex-col items-center lg:flex-row lg:items-start lg:justify-between mx-auto ">
+                <div class="xl:ml-14 xl:mt-8 w-3/4 lg:w-1/2 xl:w-1/2 lg:flex lg:flex-col lg:gap-24">
                     <div>
                         <h2 class="text-3xl xl:text-4xl text-black font-bold mb-2">Não Perca Tempo!</h2>
                         <p class="mb-8 text-black text-lg font-thin">Entre para a nossa lista VIP e descubra antes de
@@ -308,16 +315,16 @@
                             muitos e você pode ser o próximo.</p>
                     </div>
                     <div>
-                        <p class="hidden xl:block mt-4 text-black font-thin text-sm">Coloque seus dados corretamente e faça parte da nossa lista VIP. Não
+                        <p class="hidden lg:block mt-4 text-black font-thin text-sm">Coloque seus dados corretamente e faça parte da nossa lista VIP. Não
                             espere mais para economizar, ganhar e realizar com a Mtrek. Seu futuro
                             começa agora.</p>
                     </div>
                     
                 </div>
 
-                <div class="w-3/4 lg:w-1/2 xl:w-1/3 pt-8 sm:mt-4">
+                <div class="w-3/4 lg:w-1/2 xl:w-1/3 xl:pt-8">
                     <div class="bg-mtrek-right p-6 rounded-t-[30px]">
-                        <h2 class="text-2xl mb-3 lg:text-5xl xl:text-3xl text-white font-bold lg:mb xl:mb">Seja VIP e Transforme Seu Futuro Agora!</h2>
+                        <h2 class="text-2xl mb-3 lg:text-3xl text-white font-bold lg:mb xl:mb">Seja VIP e Transforme Seu Futuro Agora!</h2>
                         <p class="lg:text-lg text-white font-normal text-xs">Preencha o formulário abaixo com os seus dados válidos para participar do acesso VIP.</p>
                     </div>
                     
@@ -336,7 +343,7 @@
                         </button>
                     </form>
 
-                    <p class="block xl:hidden mt-4 text-black font-thin text-sm">Coloque seus dados corretamente e faça parte da nossa lista VIP. Não
+                    <p class="block lg:hidden mt-4 text-black font-thin text-sm">Coloque seus dados corretamente e faça parte da nossa lista VIP. Não
                         espere mais para economizar, ganhar e realizar com a Mtrek. Seu futuro
                         começa agora.</p>
                 </div>
@@ -344,7 +351,7 @@
         </section>
         
         <section>
-            <div class="container md:max-w-[600px] lg:max-w-[1100px] mx-auto px-4 pt-[240px] lg:pt-[180px] xl:pt-[240px]">
+            <div class="container md:max-w-[600px] lg:max-w-[1100px] mx-auto px-4 pt-[260px] md:pt-[100px] lg:pt-[340px] xl:pt-[280px]">
                 <h2 class="text-3xl text-black font-bold text-center mb-4">Perguntas Frequentes</h2>
                 <p class="text-black font-normal text-sm text-center mb-8">Está com alguma dúvida? Confira nosso FAQ ou entre em contato conosco.</p>
 
@@ -410,7 +417,7 @@
     </main>
 
     <footer class="gradient-bg text-white py-8">
-        <div class="container px-4 md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1100px] mx-auto">
+        <div class="container px-4 lg:px-0 md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1100px] mx-auto">
             <div class="flex flex-col lg:flex-row xl:flex-row justify-center items-center gap-2">
                 <div class=" lg:w-1/4">
                     <img class="w-[200px] lg:w-56" src="./images/LOGO BRANCO MTREK.png" alt="Logo Mtrek">
