@@ -148,14 +148,14 @@
 
         .mauticform-row {
             display: block;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         .mauticform-label {
-            font-size: 1.1em;
+            font-size: 0.8em;
             display: block;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
         }
 
         .mauticform-row.mauticform-required .mauticform-label:after {
@@ -493,7 +493,7 @@
         <section class="bg-form pt-8">
             <div
                 class="container md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1100px] flex flex-col items-center lg:flex-row lg:items-start lg:justify-between mx-auto ">
-                <div class="xl:ml-14 xl:mt-8 w-3/4 lg:w-1/2 xl:w-1/2 lg:flex lg:flex-col lg:gap-24">
+                <div class="xl:ml-14 xl:mt-8 w-3/4 lg:w-1/2 xl:w-1/2 lg:flex lg:flex-col lg:gap-[160px]">
                     <div>
                         <h2 class="text-3xl xl:text-4xl text-black font-bold mb-2">Não Perca Tempo!</h2>
                         <p class="mb-8 text-black text-lg font-thin">Entre para a nossa lista VIP e descubra antes de
@@ -513,7 +513,7 @@
 
                 <div class="w-3/4 lg:w-1/2 xl:w-1/3 xl:pt-8">
                     <div class="bg-mtrek-right px-10 py-6 rounded-t-[30px]">
-                        <h2 class="text-3xl mb-3 lg:text-2xl text-white font-bold lg:mb xl:mb">Seja VIP e Transforme Seu
+                        <h2 class="text-2xl mb-3 lg:text-2xl text-white font-bold lg:mb xl:mb">Seja VIP e Transforme Seu
                             Futuro Agora!</h2>
                         <p class="lg:text-xs text-white font-normal text-xs">Preencha o formulário abaixo com os seus
                             dados válidos para participar do acesso VIP.</p>
@@ -596,7 +596,7 @@
                         </form>
                     </div>
 
-                    <p class="block lg:hidden mt-4 text-black font-thin text-sm">Coloque seus dados corretamente e faça
+                    <p class="block lg:hidden mt-10 text-black font-thin text-sm">Coloque seus dados corretamente e faça
                         parte da nossa lista VIP. Não
                         espere mais para economizar, ganhar e realizar com a Mtrek. Seu futuro
                         começa agora.</p>
@@ -606,7 +606,7 @@
 
         <section>
             <div
-                class="container md:max-w-[600px] lg:max-w-[1100px] mx-auto px-4 pt-[480px] sm:pt-[180px] md:pt-[200px] lg:pt-[450px] xl:pt-[420px]">
+                class="container md:max-w-[600px] lg:max-w-[1100px] mx-auto px-4 pt-[400px] sm:pt-[180px] md:pt-[200px] lg:pt-[360px] xl:pt-[360px]">
                 <h2 class="text-3xl text-black font-bold text-center mb-4">Perguntas Frequentes</h2>
                 <p class="text-black font-normal text-sm text-center mb-8">Está com alguma dúvida? Confira nosso FAQ ou
                     entre em contato conosco.</p>
@@ -787,6 +787,14 @@
         }
     </script>
 
+    <script>
+        (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+            w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+            m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://mautic.mtrek.com.br/mtc.js','mt');
+
+        mt('send', 'pageview');
+    </script>
 </body>
 
 </html>
