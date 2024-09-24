@@ -28,6 +28,11 @@
         }
     </script>
     <style>
+        /* Ativando o scroll suave globalmente */
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Lato', sans-serif;
             background-color: white;
@@ -503,11 +508,10 @@
                     realizar seus objetivos.
                 </p>
 
-                <button
-                    onclick="openPopup()"
-                    class="bg-white text-mtrek-dark-purple text-sm font-bold border-2 px-8 py-2 rounded-xl text-lg font-extrabold hover:bg-transparent hover:text-white hover:border-mtrek-lilac transition-all duration-300">
-                    Quero Economizar e Ganhar
-                </button>
+                <a href="#form-section" class="bg-white text-mtrek-dark-purple text-sm font-bold border-2 px-8 py-2 rounded-xl text-lg font-extrabold hover:bg-transparent hover:text-white hover:border-mtrek-lilac transition-all duration-300"> 
+                        Quero Economizar e Ganhar
+                </a>
+                
             </div>
 
         </section>
@@ -592,7 +596,7 @@
             </div>
         </section>
 
-        <section class="bg-form pt-8">
+        <section id="form-section" class="bg-form pt-8">
             <div
                 class="container md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1100px] flex flex-col items-center lg:flex-row lg:items-start lg:justify-between mx-auto ">
                 <div class="xl:ml-14 xl:mt-8 w-3/4 lg:w-1/2 xl:w-1/2 lg:flex lg:flex-col lg:gap-[160px]">
@@ -785,14 +789,18 @@
                 <h2 class="text-xl lg:text-3xl xl:text-3xl text-black font-bold mb-4">Contate o Atendimento Mtrek</h2>
 
                 <div class="flex justify-center gap-4">
-                    <button
+                    <a
+                        href="https://whatsa.me/5519989326055"
+                        target="_blank"
                         class="bg-mtrek-dark-purple text-white text-sm font-semibold lg:font-bold xl:font-bold border-2 px-6 py-4 lg:px-10 lg:py-2 xl:px-10 xl:py-2 rounded-xl text-lg font-extrabold hover:bg-transparent hover:text-mtrek-dark-purple hover:border-mtrek-dark-purple transition-all duration-300">
                         Atendimento via <br> Whatsapp
-                    </button>
-                    <button
+                    </a>
+                    <a
+                        href="mailto:mtrek.cashback@gmail.com"
+                        target="_blank"
                         class="bg-mtrek-dark-purple text-white text-sm font-semibold lg:font-bold xl:font-bold border-2 px-6 py-4 lg:px-10 lg:py-2 xl:px-10 xl:py-2 rounded-xl text-lg font-extrabold hover:bg-transparent hover:text-mtrek-dark-purple hover:border-mtrek-dark-purple transition-all duration-300">
                         Atendimento via <br> E-mail
-                    </button>
+                    </a>
                 </div>
             </div>
 
@@ -814,13 +822,13 @@
                 </div>
                 <div class="mt-4 lg:w-1/4">
                     <div class="flex justify-center gap-2 mb-2">
-                        <a href="https://www.youtube.com/@mtrek1424">
+                        <a href="https://www.youtube.com/@mtrek_oficial" target="_blank">
                             <img class="w-10 h-10" src="./images/Youtube_4-8.png" alt="Icone do Youtube">
                         </a>
-                        <a href="https://www.instagram.com/mtrek.oficial/">
+                        <a href="https://www.instagram.com/mtrek_oficial" target="_blank">
                             <img class="w-10 h-10" src="./images/Instagram _1-8.png" alt="Icone do Instagram">
                         </a>
-                        <a href="https://www.facebook.com/mtrek.oficial">
+                        <a href="https://www.facebook.com/mtrek.comunidade" target="_blank">
                             <img class="w-10 h-10" src="./images/Facebook -8.png" alt="Icone do Facebook">
                         </a>
                     </div>
