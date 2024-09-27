@@ -250,6 +250,23 @@
             display: inline;
         }
 
+        .accordion-content {
+            max-height: 0px; /* Conteúdo inicialmente fechado */
+            overflow: hidden; /* Esconder o conteúdo excedente */
+            transition: max-height 0.3s ease; /* Suaviza a transição de abertura e fechamento */
+        }
+
+        /* Estilo base dos ícones */
+        .social-icon {
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suavizando o efeito de zoom */
+        }
+
+        /* Efeito de zoom ao passar o mouse */
+        .social-icon:hover {
+            transform: scale(1.2); /* Aumenta o ícone em 20% */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra */
+        }
+
         @media only screen and (max-width: 1600px) {
             .bg-form {
                 height: 300px;
@@ -731,7 +748,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content px-8 py-3 text-black" style="display: none;">
+                            <div class="accordion-content px-8 mt-3 text-black">
                                 Para se tornar um membro VIP e garantir sua posição entre os primeiros a se cadastrar em
                                 nossa plataforma, basta preencher o formulário com seu e-mail e WhatsApp. Clique aqui e
                                 aproveite a oportunidade de ser um dos primeiros a usufruir de nossos benefícios, ganhar
@@ -753,7 +770,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content px-8 py-3 text-black" style="display: none;">
+                            <div class="accordion-content px-8 mt-3 text-black">
                                 Imediatamente. Os resultados começam a aparecer rapidamente. A economia na conta de
                                 energia pode ser percebida já no próximo mês de faturamento, enquanto o cashback nas
                                 suas compras é acumulado imediatamente após cada transação sua e de toda sua rede.
@@ -772,7 +789,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content px-8 py-3 text-black" style="display: none;">
+                            <div class="accordion-content px-8 mt-3 text-black">
                                 Não, a Mtrek não exige nenhum investimento ou taxas ocultas. Nossa missão é oferecer
                                 economia e ganhos reais sem custos adicionais. Você paga apenas pelo consumo de energia,
                                 e os benefícios de cashback e economia são oferecidos sem comprometer seu orçamento.
@@ -822,13 +839,13 @@
                 </div>
                 <div class="mt-4 lg:w-1/4">
                     <div class="flex justify-center gap-2 mb-2">
-                        <a href="https://www.youtube.com/@mtrek_oficial" target="_blank">
+                        <a class="social-icon" href="https://www.youtube.com/@mtrek_oficial" target="_blank">
                             <img class="w-10 h-10" src="./images/Youtube_4-8.png" alt="Icone do Youtube">
                         </a>
-                        <a href="https://www.instagram.com/mtrek_oficial" target="_blank">
+                        <a class="social-icon" href="https://www.instagram.com/mtrek_oficial" target="_blank">
                             <img class="w-10 h-10" src="./images/Instagram _1-8.png" alt="Icone do Instagram">
                         </a>
-                        <a href="https://www.facebook.com/mtrek.comunidade" target="_blank">
+                        <a class="social-icon" href="https://www.facebook.com/mtrek.comunidade" target="_blank">
                             <img class="w-10 h-10" src="./images/Facebook -8.png" alt="Icone do Facebook">
                         </a>
                     </div>
@@ -860,27 +877,29 @@
             const content = element.nextElementSibling;
             const icon = element.querySelector('svg');
 
-            // Verifica se o acordeão está atualmente ativo
-            const isActive = content.style.display === "block";
+            // Verifica se o acordeão está atualmente ativo (aberto)
+            const isActive = content.style.maxHeight && content.style.maxHeight !== "0px";
 
             // Fecha todos os outros acordeões
             document.querySelectorAll('.accordion-content').forEach((item) => {
-                item.style.display = "none";
+                item.style.maxHeight = "0px"; // Fecha os outros accordion com animação
                 item.previousElementSibling.classList.remove('bg-mtrek-dark-purple', 'text-white');
                 item.previousElementSibling.classList.add('bg-white', 'text-black');
-                item.previousElementSibling.querySelector('svg').classList.remove('rotate-180', 'bg-white', 'text-black');
-                item.previousElementSibling.querySelector('svg').classList.add('text-white', 'bg-mtrek-right');
+                const svg = item.previousElementSibling.querySelector('svg');
+                svg.classList.remove('rotate-180', 'bg-white', 'text-black');
+                svg.classList.add('text-white', 'bg-mtrek-right');
             });
 
             if (!isActive) {
-                // Abre o acordeão clicado
-                content.style.display = "block";
+                // Abre o acordeão clicado com animação
+                content.style.maxHeight = content.scrollHeight + "px"; // Define a altura máxima para o tamanho real do conteúdo
                 element.classList.remove('bg-white', 'text-black');
                 element.classList.add('bg-mtrek-dark-purple', 'text-white');
                 icon.classList.remove('text-white', 'bg-mtrek-right');
                 icon.classList.add('rotate-180', 'bg-white', 'text-black');
             }
         }
+
 
 
     </script>
