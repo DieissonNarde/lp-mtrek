@@ -131,10 +131,6 @@
             clip-path: polygon(0 0, 100% 0, 100% 96%, 50% 100%, 0 96%);
         }
 
-        .mauticform-innerform {}
-
-        .mauticform-post-success {}
-
         .mauticform-name {
             font-weight: bold;
             font-size: 1.5em;
@@ -197,21 +193,13 @@
             box-sizing: border-box;
         }
 
-        .mauticform-checkboxgrp-row {}
-
         .mauticform-checkboxgrp-label {
             font-weight: normal;
         }
 
-        .mauticform-checkboxgrp-checkbox {}
-
-        .mauticform-radiogrp-row {}
-
         .mauticform-radiogrp-label {
             font-weight: normal;
         }
-
-        .mauticform-radiogrp-radio {}
 
         .mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default {
             color: #5d6c7c;
@@ -267,9 +255,9 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra */
         }
 
-        @media only screen and (max-width: 1600px) {
+        @media only screen and (max-width: 2000px) {
             .bg-form {
-                height: 300px;
+                height: 340px;
             }
 
         }
@@ -306,7 +294,7 @@
 
             .bg-form {
                 background-image: url('./images/Rectangle\ 78\(1\).png');
-                height: 740px;
+                height: 680px;
             }
         }
 
@@ -525,9 +513,9 @@
                     realizar seus objetivos.
                 </p>
 
-                <a href="#form-section" class="bg-white text-mtrek-dark-purple text-sm font-bold border-2 px-8 py-2 rounded-xl text-lg font-extrabold hover:bg-transparent hover:text-white hover:border-mtrek-lilac transition-all duration-300"> 
+                <button onclick="openPopup()" class="bg-white text-mtrek-dark-purple text-sm font-bold border-2 px-8 py-2 rounded-xl text-lg font-extrabold hover:bg-transparent hover:text-white hover:border-mtrek-lilac transition-all duration-300"> 
                         Quero Economizar e Ganhar
-                </a>
+                </button>
                 
             </div>
 
@@ -613,20 +601,20 @@
             </div>
         </section>
 
-        <section id="form-section" class="bg-form pt-8">
+        <section id="form-section" class="bg-form pt-8 sm:pt-20 lg:pt-6">
             <div
                 class="container md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1100px] flex flex-col items-center lg:flex-row lg:items-start lg:justify-between mx-auto ">
-                <div class="xl:ml-14 xl:mt-8 w-3/4 lg:w-1/2 xl:w-1/2 lg:flex lg:flex-col lg:gap-[160px]">
+                <div class="xl:ml-14 xl:mt-8 w-3/4 lg:w-1/2 xl:w-1/2 lg:flex lg:flex-col lg:gap-[140px]">
                     <div>
-                        <h2 class="text-3xl xl:text-4xl text-black font-bold mb-2">Não Perca Tempo!</h2>
-                        <p class="mb-8 text-black text-lg font-thin">Entre para a nossa lista VIP e descubra antes de
+                        <h2 class="text-3xl sm:text-5xl lg:text-3xl xl:text-4xl text-black font-bold">Não Perca Tempo!</h2>
+                        <p class="mb-2 text-lg sm:pt-6 sm:mb-8 sm:text-2xl lg:pt-2 lg:text-lg font-thin">Entre para a nossa lista VIP e descubra antes de
                             todos como transformar suas finanças. Receba
                             atualizações exclusivas, dicas valiosas e participe da
                             revolução que está fazendo a diferença na vida de
                             muitos e você pode ser o próximo.</p>
                     </div>
                     <div>
-                        <p class="hidden lg:block mt-4 text-black font-thin text-sm">Coloque seus dados corretamente e
+                        <p class="hidden lg:block mt-4 text-black font-thin text-base">Coloque seus dados corretamente e
                             faça parte da nossa lista VIP. Não
                             espere mais para economizar, ganhar e realizar com a Mtrek. Seu futuro
                             começa agora.</p>
@@ -634,7 +622,7 @@
 
                 </div>
 
-                <div class="w-3/4 lg:w-1/2 xl:w-1/3 xl:pt-8">
+                <div class="w-3/4 lg:w-1/2 xl:w-1/3 pt-10 lg:pt-4 xl:pt-8">
                     <div class="bg-mtrek-right px-10 py-6 rounded-t-[30px]">
                         <h2 class="text-2xl mb-3 lg:text-2xl text-white font-bold lg:mb xl:mb">Seja VIP e Transforme Seu
                             Futuro Agora!</h2>
@@ -719,7 +707,7 @@
                         </form>
                     </div>
 
-                    <p class="block lg:hidden mt-10 text-black font-thin text-sm">Coloque seus dados corretamente e faça
+                    <p class="block lg:hidden mt-10 text-black font-thin text-base">Coloque seus dados corretamente e faça
                         parte da nossa lista VIP. Não
                         espere mais para economizar, ganhar e realizar com a Mtrek. Seu futuro
                         começa agora.</p>
@@ -729,7 +717,7 @@
 
         <section>
             <div
-                class="container md:max-w-[600px] lg:max-w-[1100px] mx-auto px-4 pt-[400px] sm:pt-[180px] md:pt-[200px] lg:pt-[360px] xl:pt-[360px]">
+                class="container md:max-w-[600px] lg:max-w-[1100px] mx-auto px-4 pt-[450px] sm:pt-[380px] md:pt-[360px] lg:pt-[360px] xl:pt-[360px]">
                 <h2 class="text-3xl text-black font-bold text-center mb-4">Perguntas Frequentes</h2>
                 <p class="text-black font-normal text-sm text-center mb-8">Está com alguma dúvida? Confira nosso FAQ ou
                     entre em contato conosco.</p>
