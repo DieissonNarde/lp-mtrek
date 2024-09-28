@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mtrek - Obrigado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mtrek-lilac': '#FF00ED',
+                        'mtrek-dark-purple': '#3D113A',
+                        'mtrek-light-purple': '#FFECFE',
+                        'mtrek-right': '#A32D9B',
+                    },
+                    fontFamily: {
+                        'lato': ['Lato', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            color: white;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body class="bg-mtrek-dark-purple">
+    <div class="flex items-center justify-center h-screen ">
+        <div class="w-3/4 lg:w-1/3">
+            <div class="border-2 border-color-white m-auto w-[200px] sm:w-[250px] py-8">
+                <img class=" w-[150px] sm:w-[200px] m-auto" src="./images/LOGO BRANCO MTREK.png" alt="Logo Mtrek">
+            </div>
+    
+            <h2 class="text-center text-2xl sm:text-4xl font-bold mt-4">Inscrição Concluída!</h2>
+            <p class="my-6 font-thin">Estamos felizes por ter você conosco! Em breve, você receberá no seu email detalhes exclusivos sobre como economizar e ganhar com a Mtrek, de forma totalmente gratuita. <strong>Fique atento: seu acesso à plataforma está quase liberado!</strong></p>
+            <p class="font-semibold">Mtrek, o jeitinho Brasileiro de economizar, ganhar e realizar.</p>
+        </div>
+        
+    </div>
+
+    <script>
+        (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+            w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+            m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://mautic.mtrek.com.br/mtc.js','mt');
+
+        mt('send', 'pageview');
+    </script>
+</body>
+</html>
