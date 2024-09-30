@@ -62,18 +62,16 @@
             background-repeat: no-repeat;
             clip-path: polygon(0% 0%, 0% 74%, 5% 87%, 22% 88%, 27% 100%, 34% 100%, 100% 100%, 100% 0%);
             position: relative;
-            
         }
+
         .bg-hero::before {
             content: '';
             position: absolute;
-            top: 0;
+            bottom: 0;
             left: 0;
-            height: 100%;
             border-bottom: 4px solid #d946ef; /* Borda roxa clara */
             /* Ajustar o posicionamento para que a borda cubra apenas uma parte */
             width: 95%; /* Borda percorre apenas 50% da largura da div */
-            transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
         }
 
         /* Quando o mouse passar sobre o primeiro card */
@@ -90,19 +88,18 @@
         }
 
         .video-container img {
-            width: 100%;
+            width: 86%;
             height: auto;
             cursor: pointer;
+            margin: 0 auto;
         }
 
         .video-container iframe {
-            /* position: absolute;
-            top: 0;
-            left: 0; */
-            width: 100%;
+            width: 86%;
             height: 300px;
             border: 0;
             display: none;
+            margin: 0 auto;
         }
 
         .bg-section1 {
@@ -293,6 +290,9 @@
         }
 
         @media only screen and (max-width: 1024px) {
+            .video-container iframe {
+            height: 200px;
+        }
 
             /* Estilos para telas menores */
             .bg-section1 {
@@ -372,13 +372,11 @@
                     dentro das grandes novidades que estão por vir.
                 </p>
 
-                <button
-                    onclick="openPopup()"
-                    class="bg-white text-mtrek-dark-purple text-sm font-bold border-2 px-8 py-2 rounded-xl text-lg font-extrabold hover:bg-transparent hover:text-white hover:border-mtrek-lilac transition-all duration-300">
-                    Quero Economizar e Ganhar
+                <button onclick="openPopup()" class="bg-white text-mtrek-dark-purple text-sm font-bold border-2 px-8 py-2 rounded-xl text-lg font-extrabold hover:bg-transparent hover:text-white hover:border-mtrek-lilac transition-all duration-300"> 
+                        Quero Economizar e Ganhar
                 </button>
 
-                <div class="video-container my-10">
+                <div class="video-container mt-10 mb-16">
                     <!-- Imagem de capa -->
                     <img class="rounded-xl" src="./images/TAMB-VÍDEO.jpg" alt="Imagem de Capa" id="thumbnail">
 
